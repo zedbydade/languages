@@ -1,0 +1,14 @@
+/home/archie/.stack/programs/x86_64-linux/ghc-tinfo6-9.0.2/lib/ghc-9.0.2/include/ghcversion.h:
+  hash: b6281754d6dc5c5462a97f01fbffb615a7d9f031384e8e8250fce23e8f43f266
+/home/archie/exercism/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.4.1.0/build/autogen/Paths_hello_world.hs:
+  hash: 7de85bac486dfc667b184fb48cd129fbe0695e20e9b6760acbe8c834f3bb5d65
+/home/archie/exercism/haskell/hello-world/.stack-work/dist/x86_64-linux-tinfo6/Cabal-3.4.1.0/build/autogen/cabal_macros.h:
+  hash: 421a409dbdea05fc2be4464870aeb3f04bbcdd3dae7c75e0d591fcd93c843c6d
+/home/archie/exercism/haskell/hello-world/hello-world.cabal:
+  hash: be2dfc653421b6c2f6a6c71924d320ed780dc2c5180bfddc0c728da3d2f1351f
+/home/archie/exercism/haskell/hello-world/package.yaml:
+  hash: 160a1a88b7a5bd0f6f1ffd3e24f56cbba5e4d4fbd7f76ea73d649199ca9d76a5
+/home/archie/exercism/haskell/hello-world/src/HelloWorld.hs:
+  hash: 166722a5408adfc55649132fda695e6d531b9b170993936ca18f9e30555840b3
+/usr/include/stdc-predef.h:
+  hash: 64fdf694f7b3d51ec6c45c06dcb71ebbe9455742d3ea673012016668853d3bff
