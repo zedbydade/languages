@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    method_source (1.0.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  method_source
+
+BUNDLED WITH
+   2.3.26
