@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 
-%w[models routes].each do |dir|
-  $LOAD_PATH << File.expand_path('.', File.join(File.dirname(__FILE__), dirr))
-  require File.join(dir, 'init')
-end
+DB = Sequel.connect(adapter: 'postgres', host: 'localhost', database: 'pub_sub', user: 'postgres', password: 'teste123')
+
+require_all 'app'
+

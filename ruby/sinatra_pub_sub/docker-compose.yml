@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres
+    environment:
+      DATABASE_PASSWORD: teste123
+      POSTGRES_PASSWORD: teste123
+    volumes:
+      - .db-hyper:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+    driver: bridge
