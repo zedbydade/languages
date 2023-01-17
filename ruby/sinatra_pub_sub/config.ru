@@ -1,3 +1,5 @@
 require_relative './config/environment'
+require 'json'
 
-run PublicController 
+
+run ApplicationRouter 
