@@ -20,5 +20,9 @@ class ApplicationRouter < Sinatra::Base
     end
 
     get '/users/authenticate/:id' do
+        user = User[:id]
+        request_payload = JSON.parse(request.body.read)
+        response = {name: user.name}
+        body(response)
     end
 end
