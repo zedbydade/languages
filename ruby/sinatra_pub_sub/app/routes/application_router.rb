@@ -20,9 +20,12 @@ class ApplicationRouter < Sinatra::Base
     end
 
     get '/users/authenticate/:id' do
-        user = User[:id]
         request_payload = JSON.parse(request.body.read)
-        response = {name: user.name}
-        body(response)
+        user = User[:id]
+        password = BCrypt::Engine.hash_secret(params[:password], user.password)
+
+        #body("password = #{password == request_payload[:password]}") 
+        body("password = #{password}") 
+
     end
 end
