@@ -37,5 +37,22 @@ fn main() {
     let t = true;
 
     let f: bool = false;
+
+    let c = 'z';
+
+    let z: char = 'Z';
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    let five_hundred = tup.0;
+
+    let a = [1, 2, 3, 4, 5, 6];
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
 }
 
