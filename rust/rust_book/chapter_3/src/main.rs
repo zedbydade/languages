@@ -55,7 +55,16 @@ fn main() {
     let first = a[0];
     let second = a[1];
     another_function();
+
+    let number = 3;
+
+    if number < 5 {
+        print!("Condition was true");
+    } else {
+        println!("condition was false");
+    }
 }
+
 
 fn another_function() {
     println!("Another function");
