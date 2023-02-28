@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http
   specs:
     method_source (1.0.0)
 

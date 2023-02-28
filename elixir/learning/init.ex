@@ -32,3 +32,9 @@ defmodule MathTest do
     assert 1 + 1 == 2
   end
 end
+
+defmodule ModuleName do
+  def hello do
+    IO.puts("Hello World")
+  end
+end
