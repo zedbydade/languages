@@ -1,6 +1,10 @@
 defmodule Portal.Door do
   use Agent
 
+  def shoot(color) do 
+    DynamicSupervisor.start_child(Portal.DoorSupervisor, {Portal.Door, color})
+  end
+
   def start_link(color) do
     Agent.start_link(fn -> [] end, name: color)
   end
