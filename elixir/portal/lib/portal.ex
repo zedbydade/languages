@@ -1,18 +1,20 @@
 defmodule Portal do
-  @moduledoc """
-  Documentation for `Portal`.
-  """
+  defstruct [:left, :right]
 
-  @doc """
-  Hello world.
+  def transfer(left, right, data) do 
+    for item <- data do 
+      Portal.Door.push(left, item)
+    end
 
-  ## Examples
+    %Portal{left: left, right: right}
+  end
 
-      iex> Portal.hello()
-      :world
+  def push_right(portal) do 
+    case Portal.Door.pop(portal.left) do 
+      :error -> :ok 
+      {:ok, h} -> Portal.Door.push(portal.right, h)
+    end
 
-  """
-  def hello do
-    :world
+    portal
   end
 end
