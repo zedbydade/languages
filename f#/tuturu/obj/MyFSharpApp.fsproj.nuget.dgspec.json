@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/francisco.leite/dev/languages/f#/tuturu/MyFSharpApp.fsproj": {}
+  },
+  "projects": {
+    "/home/francisco.leite/dev/languages/f#/tuturu/MyFSharpApp.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/francisco.leite/dev/languages/f#/tuturu/MyFSharpApp.fsproj",
+        "projectName": "MyFSharpApp",
+        "projectPath": "/home/francisco.leite/dev/languages/f#/tuturu/MyFSharpApp.fsproj",
+        "packagesPath": "/home/francisco.leite/.nuget/packages/",
+        "outputPath": "/home/francisco.leite/dev/languages/f#/tuturu/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/francisco.leite/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/lib/dotnet/sdk/7.0.111/FSharp/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[7.0.0, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.111/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
