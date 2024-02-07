@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "acbYOKV1l6tOKpag9FUjGIaoKybM3vQNi7uT/dpoqIykr++O2p25bqRYsbqvxAQB4P1vOB8+ZbbogCJ5BuLSgQ==",
+  "success": true,
+  "projectFilePath": "/home/francisco.leite/dev/languages/f#/tuturu/MyFSharpApp.fsproj",
+  "expectedPackageFiles": [
+    "/home/francisco.leite/.nuget/packages/fsharp.core/7.0.0/fsharp.core.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
