@@ -1,0 +1,8 @@
+<.header>
+  Edit Todo list <%= @todo_list.id %>
+  <:subtitle>Use this form to manage todo_list records in your database.</:subtitle>
+</.header>
+
+<.todo_list_form changeset={@changeset} action={~p"/todo_lists/#{@todo_list}"} />
+
+<.back navigate={~p"/todo_lists"}>Back to todo_lists</.back>
