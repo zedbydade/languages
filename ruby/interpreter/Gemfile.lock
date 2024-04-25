@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.22.3)
+    racc (1.7.3)
+    ruby_parser (3.21.0)
+      racc (~> 1.5)
+      sexp_processor (~> 4.16)
+    sexp_processor (4.17.1)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  minitest (~> 5.22)
+  ruby_parser (~> 3.21)
+  sexp_processor (~> 4.17)
+
+BUNDLED WITH
+   2.5.3
