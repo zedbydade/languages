@@ -13,6 +13,13 @@ class UbyInterpreter < SexpInterpreter
     self.env = {}
   end
 
+  def process_defn(s)
+    _, name, args, *body = s
+
+    env[name] = [args, body]
+    nil
+  end
+
   def process_lvar(s)
     _, name = s
 
@@ -62,7 +69,17 @@ class UbyInterpreter < SexpInterpreter
     recv = process(recv)
     args.map! { |sub| process(sub) }
 
-    recv.send(msg, *args)
+    if recv
+      recv.send(msg, *args)
+    else
+      decls, body = env[msg]
+
+      decls.rest.zip(args).each do |name, val|
+        env[name] = val
+      end
+
+      process_block s(:block, *body)
+    end
   end
 
   def process_lit(s)
