@@ -13,14 +13,28 @@ class TestUbyInterpreter < Minitest::Test
     assert_equal(exp, int.eval(src), msg)
   end
 
-  def test_defn
+  def test_fib
     assert_eval nil, <<~EOM
-     def double(n)
-       2 * n
-     end
+      def fib(n)
+        if n <= 2 then
+        1
+      else
+        fib(n-2) + fib(n-1)
+        end
+      end
     EOM
 
-    assert_eval 42, "double(21)"
+    assert_eval 8, 'fib(6)'
+  end
+
+  def test_defn
+    assert_eval nil, <<~EOM
+      def double(n)
+        2 * n
+      end
+    EOM
+
+    assert_eval 42, 'double(21)'
   end
 
   def test_sanity
