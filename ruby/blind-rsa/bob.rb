@@ -23,18 +23,29 @@ class Bob < self
   end
 
   def signature_calculation(mu_prime, n, r)
-
     s = r.mod_inverse(n).mod_mul(mu_prime, n)
     signature = Base64.encoded64(s.to_s(2))
 
-    p "Signature procuded with Blind Rsa procedure"
+    p 'Signature procuded with Blind Rsa procedure'
     ap signature
 
     signature
   end
 
-  def verify(signature)
+  def verify(signature, e, n)
+    decoded_bytes = Base64.decode64(signature)
+    sig = decoded_bytes.to_i(256)
 
+    signed_message_bigint = sig.to_bn.mod_exp(e, n)
 
+    signed_message = signed_message_bigint.to_s(2)
+
+    initial_message = m.to_s(2)
+
+    if signed_message == initial_message
+      puts 'Verification of signature is tuturu'
+    else
+      puts 'Verification of signature is not tuturu'
+    end
   end
 end
