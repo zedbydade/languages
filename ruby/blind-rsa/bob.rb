@@ -1,9 +1,10 @@
 require 'digest/sha1'
 require 'openssl'
 require 'securerandom'
+require 'base64'
 
 class Bob < self
-  def mu(_rsa_key, n, e)
+  def mu(n, e)
     message = Digest::SHA1.hexdigest('X').bytes.pack('C*')
 
     m = OpenSSL::BN.new(message, 2)
@@ -18,6 +19,22 @@ class Bob < self
       gcd = r.gcd(N)
     end
 
-    (r.mod_exp(e, n) * m) % n
+    OpenSSL::BN.new((r.mod_exp(e, n) * m) % n)
+  end
+
+  def signature_calculation(mu_prime, n, r)
+
+    s = r.mod_inverse(n).mod_mul(mu_prime, n)
+    signature = Base64.encoded64(s.to_s(2))
+
+    p "Signature procuded with Blind Rsa procedure"
+    ap signature
+
+    signature
+  end
+
+  def verify(signature)
+
+
   end
 end
